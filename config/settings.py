@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'seller',
     'users',
     'client',
+    'werehouse'
 ]
 
 MIDDLEWARE = [
