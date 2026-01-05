@@ -18,7 +18,6 @@ class Ask(models.Model):
 
     question_text = models.CharField(max_length=200)
     status = models.CharField(
-        max_length=2,
         choices=Status.choices,
     )
 
@@ -48,7 +47,7 @@ class Delivery_workdays(models.Model):
 
 
 class Delivery_addresses(models.Model):
-    delivery_id = models.ForeignKey(Delivery)
+    delivery_id = models.ForeignKey(Delivery, on_delete=models.CASCADE)
     address_name = models.TextField(max_length=500)
     langitude = models.CharField(max_length=255)
 

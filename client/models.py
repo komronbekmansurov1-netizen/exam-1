@@ -21,7 +21,7 @@ class Client(models.Model):
     user = models.ForeignKey(Users, on_delete=models.CASCADE)
     orders_count = models.IntegerField()
     retums_products_count = models.IntegerField()
-    tags = models.ManyToManyField(Tags, on_delete=models.CASCADE)
+    tags = models.ManyToManyField(Tags, blank=True)
     lead_id = models.IntegerField()
     lead_status_id = models.ForeignKey(Lead_status, on_delete=models.CASCADE)
     trek_number = models.IntegerField()
